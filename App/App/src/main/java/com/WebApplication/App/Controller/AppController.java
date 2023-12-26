@@ -17,7 +17,7 @@ public class AppController {
     private AppServices appServices;
 
 
-    @RequestMapping("/home")
+    @RequestMapping("/welcome")
     public String home(){
         return "home";
     }
