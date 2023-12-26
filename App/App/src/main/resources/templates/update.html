@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User Update</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <h2 class="text-center">Update User</h2>
+
+                    <!-- Thymeleaf Form -->
+                    <form th:action="@{/updatelist}" th:object="${datas}" method="post">
+
+                        <!-- User ID (hidden) -->
+                        <input type="hidden" th:field="*{id}">
+
+                        <!-- Username -->
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username"  th:field="*{username}" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email"   th:field="*{email}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="movie">Book Movie Want to Book:</label>
+                            <select  class="form-control" id="movie" name="movie" th:field="*{movie}" required>
+                                <option value="">Chithha</option>
+                                <option value="">Jigarthanda DoubleX</option>
+                                <option value="">Thangalaan</option>
+                                <option value="">Captain Miller</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Book Movie Want to Book:</label>
+                            <input type="date" class="form-control" id="date" name="date" th:field="*{date}" required>
+
+                        </div>
+
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-block">Update</button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js (optional, for certain Bootstrap components) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-0tCjn6gERApKvaBA/C3AqssF5+g6o9MAMxBkmM6UI3K49T08a7ICGlSv8fCFrLs6"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+        integrity="sha384-pzjw8GCbKn5l3oV/NFqA1t+Zf4e8AJGoBYEuj4+JBmTFFiDXDp4HTKbZbBauz4t"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-eBRlW5JBVMdsWlQm3oVMWSktQOp6ZL4fOT2/cU9g8rbF7R+dKzI7D+6AeI/dtZz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

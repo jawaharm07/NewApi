@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <h2 class="text-center">Login</h2>
+
+                    <!-- Thymeleaf Form -->
+                    <form th:action="@{/save}" method="post">
+
+                        <!-- Username -->
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+
+                        <!-- Email (Thymeleaf binding) -->
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email"  required>
+                        </div>
+                        <!-- Email (Thymeleaf binding) -->
+                        <div class="form-group">
+                            <label for="movie">Book Movie Want to Book:</label>
+                            <select  id="movie" name="movie" class="form-control" required>
+                                <option value=""selected disabled>Default</option>
+                                <option value="Chithha">Chithha</option>
+                                <option value="Jigarthanda DoubleX">Jigarthanda DoubleX</option>
+                                <option value="Thangalaan">Thangalaan</option>
+                                <option value="Captain Miller">Captain Miller</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Mention Date:</label>
+                            <input type="date" class="form-control" id="date" name="date"  required>
+
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js (optional, for certain Bootstrap components) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-0tCjn6gERApKvaBA/C3AqssF5+g6o9MAMxBkmM6UI3K49T08a7ICGlSv8fCFrLs6"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+        integrity="sha384-pzjw8GCbKn5l3oV/NFqA1t+Zf4e8AJGoBYEuj4+JBmTFFiDXDp4HTKbZbBauz4t"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-eBRlW5JBVMdsWlQm3oVMWSktQOp6ZL4fOT2/cU9g8rbF7R+dKzI7D+6AeI/dtZz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

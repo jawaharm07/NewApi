@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jawahar
+    username: root
+    password: Jawa@6009
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: jawaharmayandi@gmail.com
+    password: jeqk dseg akap zitp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
