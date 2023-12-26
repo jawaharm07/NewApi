@@ -15,7 +15,10 @@ import java.util.List;
 public class AppController {
     @Autowired
     private AppServices appServices;
-
+    @RequestMapping("/vasanth")
+    public string vasanth(){
+        return "vasanth";
+    }
 
     @RequestMapping("/home")
     public String home(){
